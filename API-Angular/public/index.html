@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>API REST Test</title>
+</head>
+
+<body>
+  <section id=local>
+    <header>
+      <div class="container">
+        <h2 class="titles"> {{title}}</h2>
+      </div>
+
+    <div class="container" style="overflow-x:auto" >
+    <table >
+      <tr id="firstr">
+        <th>ID </th>
+        <th>Nombre</th>
+        <th>Especie</th>
+        <th>Imagen</th>
+        <th>Estatus</th>
+      </tr> 
+      <tr *ngFor ="let lstdata_result of lstdata_results">
+        <th>{{lstdata_result.id}}</th>
+        <th>{{lstdata_result.name}}</th>
+        <th>{{lstdata_result.species}}</th>
+        <th><img src="{{lstdata_result.image}}" alt="Logotipo de HTML5" width="70" height="43" /></th>
+        <th>{{lstdata_result.status}}</th>
+      </tr>
+  </table>
+  </div>
+
+  <div *ngFor="let lstdata_inf of lstdata_info">
+    <h2>{{ lstdata_inf.next}}</h2>
+</div>
+</header>
+</section>
+</body>
+</html>
+
